@@ -45,73 +45,31 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) 
         filter: "blur(40px)"
       }}
       transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
-      className="fixed inset-0 z-[100] bg-[#000000] flex items-center justify-center overflow-hidden"
+      className="fixed inset-0 z-[100] bg-[#030014]/80 backdrop-blur-[30px] flex items-center justify-center overflow-hidden"
     >
-      <div className="relative flex flex-col items-center">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="relative flex flex-col items-center justify-center z-10 w-full max-w-xl px-6"
+      >
         <video 
           src="/assets/logo reveal.mp4" 
           autoPlay 
           muted 
           playsInline 
-          className="w-64 md:w-96 mb-8 rounded-xl"
-        />
-        <div className="relative">
-          <svg viewBox="0 0 400 120" className="w-[280px] md:w-[500px] overflow-visible">
-            <motion.text
-              x="50%"
-              y="50%"
-              textAnchor="middle"
-              dominantBaseline="middle"
-              fill="transparent"
-              stroke="rgba(255,255,255,0.9)"
-              strokeWidth="0.3"
-              fontSize="100"
-              fontWeight="200"
-              style={{ 
-                letterSpacing: "0.3em",
-                fontFamily: "var(--font-display)"
-              }}
-              initial={{ strokeDasharray: 1000, strokeDashoffset: 1000 }}
-              animate={{ 
-                strokeDashoffset: 0,
-                fill: "rgba(255,255,255,1)",
-                stroke: "rgba(255,255,255,0)"
-              }}
-              transition={{ 
-                strokeDashoffset: { duration: 2.5, ease: "easeInOut" },
-                fill: { duration: 1.2, delay: 2.0 },
-                stroke: { duration: 1.2, delay: 2.0 }
-              }}
-            >
-              GMS
-            </motion.text>
-          </svg>
-          
-          {/* Architectural accent lines */}
-          <motion.div
-            initial={{ scaleX: 0, opacity: 0 }}
-            animate={{ scaleX: 1, opacity: 1 }}
-            transition={{ duration: 2.0, delay: 0.8, ease: "circOut" }}
-            className="absolute -bottom-2 left-0 right-0 h-[0.5px] bg-white/20 origin-center"
-          />
-        </div>
-        
-        <motion.div
-          initial={{ width: 0, opacity: 0 }}
-          animate={{ width: "160px", opacity: 1 }}
-          transition={{ duration: 1.5, delay: 2.2, ease: "circOut" }}
-          className="h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent mt-8"
+          className="w-full h-auto mix-blend-screen shadow-[0_0_100px_rgba(99,102,241,0.3)] rounded-3xl"
         />
         
         <motion.p
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 0.5, y: 0 }}
-          transition={{ duration: 1.5, delay: 2.8 }}
-          className="text-[9px] uppercase tracking-[0.8em] text-white mt-6 font-light font-display"
+          animate={{ opacity: 0.6, y: 0 }}
+          transition={{ duration: 1.5, delay: 1.5 }}
+          className="text-[10px] md:text-xs uppercase tracking-[0.8em] text-white mt-12 font-light font-display"
         >
           CRAFTING EXPERIENCE
         </motion.p>
-      </div>
+      </motion.div>
 
       {/* Sophisticated ambient glow */}
       <motion.div
