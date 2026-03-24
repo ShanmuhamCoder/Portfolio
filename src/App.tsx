@@ -45,30 +45,34 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) 
         filter: "blur(40px)"
       }}
       transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
-      className="fixed inset-0 z-[100] bg-[#030014]/80 backdrop-blur-[30px] flex items-center justify-center overflow-hidden"
+      className="fixed inset-0 z-[100] bg-[#030014] flex items-center justify-center overflow-hidden"
     >
+      {/* Render the video as an absolute fullscreen element dropping its black bg via mix-blend-screen */}
       <motion.div 
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        className="relative flex flex-col items-center justify-center z-10 w-full max-w-xl px-6"
+        transition={{ duration: 1.8, ease: "easeOut" }}
+        className="absolute inset-0 flex items-center justify-center"
       >
         <video 
           src="/assets/logo reveal.mp4" 
           autoPlay 
           muted 
           playsInline 
-          className="w-full h-auto mix-blend-screen shadow-[0_0_100px_rgba(99,102,241,0.3)] rounded-3xl"
+          className="w-full h-full object-contain mix-blend-screen opacity-90"
         />
-        
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 0.6, y: 0 }}
-          transition={{ duration: 1.5, delay: 1.5 }}
-          className="text-[10px] md:text-xs uppercase tracking-[0.8em] text-white mt-12 font-light font-display"
-        >
+      </motion.div>
+      
+      {/* Cinematic Subtitle */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 0.6, y: 0 }}
+        transition={{ duration: 1.5, delay: 1.2 }}
+        className="absolute bottom-16 z-20 pointer-events-none text-center"
+      >
+        <p className="text-[10px] md:text-xs uppercase tracking-[0.8em] text-white font-light font-display">
           CRAFTING EXPERIENCE
-        </motion.p>
+        </p>
       </motion.div>
 
       {/* Sophisticated ambient glow */}
