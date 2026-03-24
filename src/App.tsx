@@ -102,7 +102,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) 
           transition={{ duration: 1.5, delay: 2.8 }}
           className="text-[9px] uppercase tracking-[0.8em] text-white mt-6 font-light font-display"
         >
-          Designing the Future of Interaction
+          CRAFTING EXPERIENCE
         </motion.p>
       </div>
 
@@ -132,16 +132,16 @@ const works = [
     tags: ["UX Research", "UI Design", "Figma", "4 Weeks"],
     link: "https://zepto-cs.netlify.app",
     github: "#",
-    image: "https://picsum.photos/seed/zepto-ux-redesign/1200/800",
+    image: "/zepto-thumbnail final.png",
     color: "from-purple-700 via-indigo-600 to-purple-800"
   }
 ];
 
 const skills = [
-  { name: "Frontend", icon: <Layout className="w-5 h-5" />, items: ["React", "TypeScript", "Tailwind CSS", "Next.js"], color: "text-blue-400" },
-  { name: "Backend", icon: <Terminal className="w-5 h-5" />, items: ["Node.js", "Express", "PostgreSQL", "Firebase"], color: "text-purple-400" },
-  { name: "AI & ML", icon: <Cpu className="w-5 h-5" />, items: ["Gemini AI", "OpenAI API", "TensorFlow.js"], color: "text-rose-400" },
-  { name: "Tools", icon: <Code2 className="w-5 h-5" />, items: ["Git", "Docker", "Vite", "AWS"], color: "text-amber-400" }
+  { name: "Product Design", icon: <Palette className="w-5 h-5" />, items: ["Figma", "Wireframing", "Prototyping", "User Flows"], color: "text-rose-400" },
+  { name: "UX Research", icon: <User className="w-5 h-5" />, items: ["Design Thinking", "Journey Maps", "Usability Testing", "Analytics"], color: "text-blue-400" },
+  { name: "Visual & Motion", icon: <Layers className="w-5 h-5" />, items: ["Photoshop", "Illustrator", "After Effects", "Typography"], color: "text-purple-400" },
+  { name: "Development", icon: <Code2 className="w-5 h-5" />, items: ["HTML/CSS/JS", "React", "Tailwind CSS", "Java", "SQL"], color: "text-emerald-400" }
 ];
 
 export default function App() {
@@ -245,7 +245,7 @@ export default function App() {
                             : "text-zinc-400 hover:text-white hover:bg-white/5"
                         }`}
                       >
-                        {item === "works" ? "Works" : item}
+                        {item === "works" ? "Projects" : item}
                       </motion.a>
                     ))}
                   </div>
@@ -264,7 +264,7 @@ export default function App() {
             <main className="relative z-10">
               {/* Hero Section */}
               <section id="home" className="relative min-h-screen flex items-center justify-center px-4 pt-20">
-                <div className="max-w-5xl text-center">
+                <div className="max-w-5xl text-center pb-24">
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -310,7 +310,7 @@ export default function App() {
                         whileTap={{ scale: 0.98 }}
                         className="group w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl font-black uppercase tracking-widest flex items-center justify-center gap-3 shadow-2xl shadow-indigo-500/25 transition-all"
                       >
-                        Explore Work <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                        Explore Projects <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
                       </motion.a>
                       <motion.a
                         href="#contact"
@@ -318,7 +318,7 @@ export default function App() {
                         whileTap={{ scale: 0.98 }}
                         className="w-full sm:w-auto px-10 py-5 bg-white/5 border border-white/10 text-white rounded-2xl font-black uppercase tracking-widest backdrop-blur-md transition-all"
                       >
-                        Contact Me
+                        Hire Me
                       </motion.a>
                     </div>
                   </motion.div>
@@ -328,9 +328,9 @@ export default function App() {
                 <motion.div 
                   animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute bottom-10 left-1/2 -translate-x-1/2 w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1"
+                  className="absolute bottom-8 left-1/2 -translate-x-1/2 w-6 h-10 border-2 border-white/40 rounded-full flex justify-center p-1 shadow-[0_0_15px_rgba(255,255,255,0.1)] backdrop-blur-sm z-20"
                 >
-                  <div className="w-1 h-2 bg-indigo-500 rounded-full" />
+                  <div className="w-1 h-2 bg-indigo-400 rounded-full shadow-[0_0_8px_rgba(99,102,241,0.8)]" />
                 </motion.div>
               </section>
 
@@ -339,9 +339,9 @@ export default function App() {
                 <div className="max-w-7xl mx-auto">
                   <div className="grid lg:grid-cols-2 gap-20 items-center">
                     <motion.div
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
+                      initial={{ opacity: 0, scale: 0.8, y: 50 }}
+                      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                      viewport={{ once: false, amount: 0.2 }}
                       className="relative group"
                     >
                       <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-[2.5rem] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity" />
@@ -355,27 +355,13 @@ export default function App() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                       </div>
                       
-                      <motion.div 
-                        initial={{ x: 50, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        className="absolute -bottom-10 -right-10 p-8 bg-indigo-600/20 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl hidden md:block"
-                      >
-                        <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                            <Layers size={24} />
-                          </div>
-                          <div>
-                            <p className="text-white font-black uppercase tracking-tighter text-lg">Product Design</p>
-                            <p className="text-zinc-300 text-xs font-bold uppercase tracking-widest">Design with Purpose</p>
-                          </div>
-                        </div>
-                      </motion.div>
+
                     </motion.div>
 
                     <motion.div
-                      initial={{ opacity: 0, x: 50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
+                      initial={{ opacity: 0, x: 50, y: 20 }}
+                      whileInView={{ opacity: 1, x: 0, y: 0 }}
+                      viewport={{ once: false, amount: 0.2 }}
                     >
                       <div className="flex items-center gap-3 text-indigo-400 mb-6">
                         <div className="w-8 h-[2px] bg-indigo-500" />
@@ -392,13 +378,15 @@ export default function App() {
                         My work is driven by a simple question: how can we make technology more human? Whether I’m sketching a flow or writing code, I’m focused on creating things that are useful, elegant, and genuinely valuable.
                       </p>
 
-                      <motion.button 
-                        whileHover={{ scale: 1.05, x: 5 }}
+                      <motion.a 
+                        href="/resume.pdf"
+                        download="Shanmuham_Resume.pdf"
+                        whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(99, 102, 241, 0.4)" }}
                         whileTap={{ scale: 0.95 }}
-                        className="group flex items-center gap-3 text-white font-black uppercase tracking-widest text-sm hover:text-indigo-400 transition-colors"
+                        className="group inline-flex items-center gap-3 px-8 py-4 bg-indigo-600 text-white rounded-2xl font-black uppercase tracking-widest text-sm shadow-xl shadow-indigo-500/20 hover:bg-indigo-500 transition-all border border-indigo-500"
                       >
-                        Download Resume <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                      </motion.button>
+                        Download Resume <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                      </motion.a>
                     </motion.div>
                   </div>
                 </div>
@@ -409,15 +397,15 @@ export default function App() {
                 <div className="max-w-7xl mx-auto">
                   <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
                     <motion.div
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={{ opacity: 0, y: 50 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: false, amount: 0.2 }}
                     >
                       <div className="flex items-center gap-3 text-indigo-400 mb-6">
                         <div className="w-8 h-[2px] bg-indigo-500" />
-                        <span className="text-sm font-black uppercase tracking-[0.3em]">Selected Works</span>
+                        <span className="text-sm font-black uppercase tracking-[0.3em]">Projects</span>
                       </div>
-                      <h2 className="text-6xl font-black text-white leading-none font-display">Portfolio</h2>
+                      <h2 className="text-6xl font-black text-white leading-none font-display">Projects</h2>
                     </motion.div>
                     <p className="text-zinc-500 max-w-md font-medium">
                       A curated collection of digital experiences where I've combined 
@@ -425,60 +413,72 @@ export default function App() {
                     </p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                  <div className="grid grid-cols-1 gap-10 max-w-4xl mx-auto">
                     {works.map((work, index) => (
                       <motion.div
                         key={work.title}
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 60 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.2 }}
                         transition={{ delay: index * 0.1 }}
                         whileHover={{ 
                           y: -12,
                           boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
                           transition: { type: "spring", stiffness: 400, damping: 25 }
                         }}
-                        className="project-card group relative bg-white/5 border border-white/10 rounded-[2.5rem] overflow-hidden backdrop-blur-sm transition-all duration-500 hover:border-white/20 cursor-pointer"
+                        className="project-card group relative rounded-[2.5rem] overflow-hidden cursor-pointer w-full" style={{ aspectRatio: '1352/936' }}
                       >
                         <a 
                           href={work.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block h-full"
+                          className="block w-full h-full relative"
+                          data-cursor="view"
                         >
-                          <div className="aspect-[4/3] overflow-hidden relative">
-                            <img 
-                              src={work.image} 
-                              alt={work.title} 
-                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                              referrerPolicy="no-referrer"
-                            />
-                            <div className={`absolute inset-0 bg-gradient-to-br ${work.color} opacity-0 group-hover:opacity-40 transition-opacity duration-500`} />
-                            <div className="absolute top-6 right-6 flex gap-2">
-                              <div className="w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">
-                                <ExternalLink size={18} />
-                              </div>
-                            </div>
-                          </div>
+                          {/* Background Image Container */}
+                          <img 
+                            src={work.image} 
+                            alt={work.title} 
+                            className="absolute inset-0 w-full h-full object-fill transition-transform duration-700"
+                            referrerPolicy="no-referrer"
+                          />
                           
-                          <div className="p-8">
-                            <div className="flex flex-wrap gap-2 mb-6">
-                              {work.tags.map(tag => (
-                                <span key={tag} className="text-[10px] font-black uppercase tracking-widest px-3 py-1.5 bg-white/5 text-zinc-400 rounded-lg border border-white/5">
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                            <h3 className="text-2xl font-black mb-3 text-white group-hover:text-indigo-400 transition-colors font-display">
-                              {work.title}
-                            </h3>
-                            <p className="text-zinc-500 text-sm leading-relaxed mb-8 line-clamp-2 font-medium">
-                              {work.description}
-                            </p>
-                            <div className="flex items-center justify-between pt-6 border-t border-white/5">
-                              <div className="text-xs font-black uppercase tracking-widest text-indigo-500 hover:text-indigo-400 transition-colors flex items-center gap-2">
-                                View Case Study <ExternalLink size={14} />
+                          {/* Overlay Gradients */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent transition-opacity duration-500" />
+                          {/* Subtle dark overlay on hover to ensure text readability without changing the poster's actual color */}
+                          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-500" />
+                          
+                          {/* Bottom Content Container */}
+                          <div className="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end z-10 text-white">
+                            
+                            {/* Slide-Up Container */}
+                            <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]">
+                              
+                              <div className="flex flex-wrap gap-2 mb-4">
+                                {work.tags.map(tag => (
+                                  <span key={tag} className="text-[10px] font-black uppercase tracking-widest px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+                                    {tag}
+                                  </span>
+                                ))}
                               </div>
+                              
+                              <h3 className="text-3xl font-black mb-2 font-display">
+                                {work.title}
+                              </h3>
+                              
+                              {/* Hidden by default, revealed via Grid 0fr trick! */}
+                              <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] opacity-0 group-hover:opacity-100">
+                                <div className="overflow-hidden">
+                                  <p className="text-zinc-200 text-sm leading-relaxed mt-3 mb-6 font-medium line-clamp-3">
+                                    {work.description}
+                                  </p>
+                                  
+                                  <div className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full text-xs font-black uppercase tracking-widest shadow-xl transition-all hover:bg-zinc-200">
+                                    View Case Study <ExternalLink size={14} />
+                                  </div>
+                                </div>
+                              </div>
+
                             </div>
                           </div>
                         </a>
@@ -504,10 +504,9 @@ export default function App() {
                         <span className="text-sm font-black uppercase tracking-[0.3em]">Expertise</span>
                         <div className="w-8 h-[2px] bg-emerald-500" />
                       </div>
-                      <h2 className="text-6xl font-black text-white mb-6 font-display">Tech Stack</h2>
+                      <h2 className="text-6xl font-black text-white mb-6 font-display">My Toolkit</h2>
                       <p className="text-zinc-500 max-w-2xl mx-auto text-lg font-medium">
-                        I use a modern and powerful set of tools to bring ideas to life with 
-                        efficiency and precision.
+                        I leverage a comprehensive set of design methodologies and tools to craft intuitive, user-centered experiences from research to final prototype.
                       </p>
                     </motion.div>
                   </div>
@@ -516,9 +515,9 @@ export default function App() {
                     {skills.map((skill, index) => (
                       <motion.div
                         key={skill.name}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
+                        initial={{ opacity: 0, scale: 0.8, y: 60 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.2 }}
                         transition={{ delay: index * 0.1 }}
                         whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
                         className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-300 group"
@@ -552,9 +551,9 @@ export default function App() {
               <section id="contact" className="py-40 px-4 relative">
                 <div className="max-w-5xl mx-auto">
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, scale: 0.95, y: 100 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.2 }}
                     className="relative p-12 md:p-20 rounded-[3rem] bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 overflow-hidden text-center shadow-2xl shadow-indigo-500/20"
                   >
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20" />
@@ -582,13 +581,15 @@ export default function App() {
                         </motion.a>
                         <div className="flex gap-4">
                           {[
-                            { icon: <Linkedin size={24} />, href: "#" },
-                            { icon: <Github size={24} />, href: "#" },
-                            { icon: <Globe size={24} />, href: "#" }
+                            { icon: <Linkedin size={24} />, href: "https://www.linkedin.com/in/gmshanmuham", label: "LinkedIn" },
+                            { icon: <Github size={24} />, href: "https://github.com", label: "GitHub" }
                           ].map((social, i) => (
                             <motion.a
                               key={i}
                               href={social.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={social.label}
                               whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.2)" }}
                               whileTap={{ scale: 0.9 }}
                               className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-white border border-white/20 transition-all"
@@ -613,19 +614,7 @@ export default function App() {
                   <span className="text-xl font-black tracking-tighter text-white uppercase">GMS.port</span>
                 </div>
                 
-                <div className="flex gap-8">
-                  {["Twitter", "LinkedIn", "GitHub", "Dribbble"].map(item => (
-                    <motion.a 
-                      key={item} 
-                      href="#" 
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="text-xs font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors"
-                    >
-                      {item}
-                    </motion.a>
-                  ))}
-                </div>
+
 
                 <p className="text-zinc-500 text-xs font-bold uppercase tracking-widest">
                   &copy; {new Date().getFullYear()} GMS. All rights reserved.

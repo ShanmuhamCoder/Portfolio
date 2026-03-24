@@ -1,0 +1,134 @@
+Shanmuham GM
+shanmuhamcoder@gmail.com
+ 
+7305801121
+ 
+Chennai,Tamilnadu
+ 
+linkedin.com/in/gmshanmuham
+ 
+PROFESSIONAL SUMMARY
+Aspiring Product Designer skilled in user-centered design, problem solving, and UX thinking. Strong at 
+identifying user pain points and designing simple, intuitive digital experiences. Passionate about building 
+products that are useful, accessible, and easy to use.
+EDUCATION
+BCA
+Nazareth College Of Arts and Science
+•
+Scored 73% overall
+05/2025
+Chennai,Tamilnadu
+•
+Developed a strong interest in software development - HTML, CSS, JavaScript,  
+and SQL through online platforms.
+•
+I developed a strong interest in design by observing how people interact with 
+digital products and exploring ways to improve usability and user experience.
+HSC
+Sri Venkateshwara Higher Secondary School
+•
+Achieved 90% in 12th Grade (ACCOUNTANCY with COMPUTER APPLICATION).
+04/2022
+Chennai,Tamilnadu
+•
+Held the role of Class Representative
+SSLC
+Joyhill matriculation school
+• Scored 93% overall
+04/2020
+Chennai,Tamilnadu
+• Class Representative during SSLC – organized academic and cultural activities, 
+acted as a bridge between students and faculty
+•
+Winner of several inter-school matches and competitions.
+PROJECTS
+Zepto App Redesign 01/2026 – 03/2026
+Problem / Why
+•
+Identified usability issues in the Zepto grocery ordering experience, including 
+difficult product discovery, lack of cost-saving alternatives, and limited support 
+for household shopping.
+What I Did
+•
+Designed Smart Substitute, a feature that suggests lower-cost alternatives for 
+selected products.
+•
+Introduced Family Cart, enabling multiple family members to add items to a 
+shared cart.
+•
+Redesigned the Cart Page to simplify item review and improve checkout clarity.
+•
+Added a Recipe Discovery section on the home screen to help users plan meals and 
+shop ingredients easily.
+•
+Designed Zepto Lens AI, a visual search feature allowing users to find products 
+using image recognition.
+Result / Outcome
+•
+Improved product discovery and shopping convenience through AI-assisted search 
+and recipe-based browsing.
+•
+Simplified checkout flow with a redesigned cart interface.
+•
+Enhanced value for users by introducing price-saving alternatives and 
+collaborative shopping features.
+----------------Page (0) Break----------------
+SKILLS
+PRODUCT DESIGN & UX
+•
+Created wireframes and prototypes using Figma to visualize user flows.
+•
+Translated user requirements into simple, user-friendly designs.
+USER RESEARCH & ANALYSIS
+•
+Conducted basic user research and competitor analysis to identify UX gaps.
+•
+Used feedback and simple metrics (Excel/ analytics basics) to improve designs.
+DESIGN PROCESS
+•
+Applied design thinking to solve user problems.
+•
+Created customer journey maps to understand end-to-end user experience.
+TOOLS & WORKFLOW
+•
+Figma (Wireframing & Prototyping) | Photoshop (Visual Design) | Illustrator (Icons & Graphics) | After 
+Effects (Micro-interactions) | Premiere Pro (Design Demos & Videos)
+COLLABORATION & SKILLS
+•
+Worked with cross-functional perspectives to align design with user needs.
+•
+Strong problem-solving, critical thinking, and communication skills.
+Technical (Supportive): Java, HTML, CSS, JavaScript.
+CERTIFICATES
+JAVASCRIPT -Beginner 
+Gained foundational knowledge 
+of JavaScript syntax, data types, 
+functions, DOM manipulation, 
+and basic event handling.
+Use Generative AI for software 
+development [IBM] 
+Learned basics how to leverage 
+Generative AI tools like AI code 
+assistants, prompt engineering, 
+and AI-powered debugging to 
+improve efficiency in software 
+development. 
+GIT 
+Understood the core concepts of 
+version control using Git, 
+including commits, branches, 
+merging, and repositories. 
+Gained hands-on experience in 
+using GitHub for code 
+collaboration and project 
+tracking.
+Digital skills -User 
+Experience[ACCENTURE] 
+Explored the principles of user-
+centered design, UX research, 
+wireframing, and usability 
+testing. Gained awareness of 
+how to create meaningful, 
+accessible, and engaging user 
+experiences for digital products.
+----------------Page (1) Break----------------
