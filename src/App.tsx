@@ -48,6 +48,15 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) 
       className="fixed inset-0 z-[100] bg-[#000000] flex items-center justify-center overflow-hidden"
     >
       <div className="relative flex flex-col items-center">
+        {/* The seamless Logo Reveal Image (with mix-blend-screen to perfectly drop its background into pure black) */}
+        <motion.img 
+          src="/assets/logo revealfnl.jpeg" 
+          alt="Logo" 
+          initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+          transition={{ duration: 1.8, ease: "easeOut" }}
+          className="w-28 md:w-40 mb-6 object-contain mix-blend-screen"
+        />
         <div className="relative">
           <svg viewBox="0 0 400 120" className="w-[280px] md:w-[500px] overflow-visible">
             <motion.text
