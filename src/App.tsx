@@ -49,7 +49,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) 
     >
       <div className="relative flex flex-col items-center">
         <video 
-          src="/logo reveal.mp4" 
+          src="/assets/logo reveal.mp4" 
           autoPlay 
           muted 
           playsInline 
@@ -139,7 +139,7 @@ const works = [
     tags: ["UX Research", "UI Design", "Figma", "4 Weeks"],
     link: "https://zepto-cs.netlify.app",
     github: "#",
-    image: "/zepto-thumbnail final.png",
+    image: "/assets/zepto-thumbnail final.png",
     color: "from-purple-700 via-indigo-600 to-purple-800"
   }
 ];
@@ -354,7 +354,7 @@ export default function App() {
                       <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-[2.5rem] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity" />
                       <div className="relative aspect-square rounded-[2rem] overflow-hidden border border-white/20 bg-zinc-900 shadow-2xl">
                         <img 
-                          src="/ai image.jpeg" 
+                          src="/assets/ai image.jpeg" 
                           alt="Profile" 
                           className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                           referrerPolicy="no-referrer"
@@ -386,7 +386,7 @@ export default function App() {
                       </p>
 
                       <motion.a 
-                        href="/resume.pdf"
+                        href="/assets/resume.pdf"
                         download="Shanmuham_Resume.pdf"
                         whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(99, 102, 241, 0.4)" }}
                         whileTap={{ scale: 0.95 }}
