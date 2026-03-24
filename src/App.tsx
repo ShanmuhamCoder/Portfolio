@@ -48,6 +48,13 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) 
       className="fixed inset-0 z-[100] bg-[#000000] flex items-center justify-center overflow-hidden"
     >
       <div className="relative flex flex-col items-center">
+        <video 
+          src="/logo reveal.mp4" 
+          autoPlay 
+          muted 
+          playsInline 
+          className="w-64 md:w-96 mb-8 rounded-xl"
+        />
         <div className="relative">
           <svg viewBox="0 0 400 120" className="w-[280px] md:w-[500px] overflow-visible">
             <motion.text
@@ -347,9 +354,9 @@ export default function App() {
                       <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-[2.5rem] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity" />
                       <div className="relative aspect-square rounded-[2rem] overflow-hidden border border-white/20 bg-zinc-900 shadow-2xl">
                         <img 
-                          src="https://picsum.photos/seed/gms-designer/1000/1000" 
+                          src="/ai image.jpeg" 
                           alt="Profile" 
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                           referrerPolicy="no-referrer"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -426,20 +433,20 @@ export default function App() {
                           boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
                           transition: { type: "spring", stiffness: 400, damping: 25 }
                         }}
-                        className="project-card group relative rounded-[2.5rem] overflow-hidden cursor-pointer w-full" style={{ aspectRatio: '1352/936' }}
+                        className="project-card group relative rounded-[2.5rem] overflow-hidden cursor-pointer w-full bg-zinc-900 border border-white/10"
                       >
                         <a 
                           href={work.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block w-full h-full relative"
+                          className="block relative w-full h-full"
                           data-cursor="view"
                         >
                           {/* Background Image Container */}
                           <img 
                             src={work.image} 
                             alt={work.title} 
-                            className="absolute inset-0 w-full h-full object-fill transition-transform duration-700"
+                            className="block w-full h-auto transition-transform duration-700 group-hover:scale-105"
                             referrerPolicy="no-referrer"
                           />
                           
