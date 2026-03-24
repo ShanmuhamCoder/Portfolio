@@ -226,8 +226,8 @@ export default function App() {
                     animate={{ opacity: 1, x: 0 }}
                     className="text-2xl font-black tracking-tighter flex items-center gap-2 group cursor-pointer font-display"
                   >
-                    <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-500/20 group-hover:rotate-12 transition-transform">
-                      <Zap size={20} fill="currentColor" />
+                    <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-indigo-500/20 group-hover:-rotate-12 transition-transform">
+                      <img src="/assets/logoreveal.jpeg" alt="GMS Logo" className="w-full h-full object-cover" />
                     </div>
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400">GMS</span>
                   </motion.div>
@@ -608,8 +608,8 @@ export default function App() {
             <footer className="py-20 px-4 border-t border-white/5 relative z-10">
               <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center text-white">
-                    <Zap size={16} fill="currentColor" />
+                  <div className="w-8 h-8 rounded-lg overflow-hidden shadow-lg shadow-indigo-500/20 hover:rotate-12 transition-transform cursor-pointer">
+                    <img src="/assets/logoreveal.jpeg" alt="GMS Logo" className="w-full h-full object-cover" />
                   </div>
                   <span className="text-xl font-black tracking-tighter text-white uppercase">GMS.port</span>
                 </div>
