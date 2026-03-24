@@ -45,7 +45,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) 
         filter: "blur(40px)"
       }}
       transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
-      className="fixed inset-0 z-[100] bg-[#030014] flex items-center justify-center overflow-hidden"
+      className="fixed inset-0 z-[100] bg-[#000000] flex items-center justify-center overflow-hidden"
     >
       {/* Render the video as an absolute fullscreen element dropping its black bg via mix-blend-screen */}
       <motion.div 
@@ -59,7 +59,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) 
           autoPlay 
           muted 
           playsInline 
-          className="w-full h-full object-contain mix-blend-screen opacity-90"
+          className="w-full h-full object-contain mix-blend-screen"
         />
       </motion.div>
       
