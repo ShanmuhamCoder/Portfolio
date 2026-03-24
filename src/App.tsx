@@ -240,7 +240,7 @@ export default function App() {
                     <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-indigo-500/20 group-hover:-rotate-12 transition-transform">
                       <img src="/assets/logoreveal.jpeg" alt="GMS Logo" className="w-full h-full object-cover" />
                     </div>
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400">GMS</span>
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400">GMS PORTFOLIO</span>
                   </motion.div>
                   
                   <div className="hidden md:flex items-center space-x-1 bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-md">
@@ -622,7 +622,7 @@ export default function App() {
                   <div className="w-8 h-8 rounded-lg overflow-hidden shadow-lg shadow-indigo-500/20 hover:rotate-12 transition-transform cursor-pointer">
                     <img src="/assets/logoreveal.jpeg" alt="GMS Logo" className="w-full h-full object-cover" />
                   </div>
-                  <span className="text-xl font-black tracking-tighter text-white uppercase">GMS.port</span>
+                  <span className="text-xl font-black tracking-tighter text-white uppercase">GMS PORTFOLIO</span>
                 </div>
                 
 
