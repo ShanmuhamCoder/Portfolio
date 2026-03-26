@@ -31,14 +31,16 @@ import {
 import { useState, useEffect, useRef } from "react";
 
 const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.defaultMuted = true;
-      videoRef.current.muted = true;
-      videoRef.current.play().catch(e => console.log("Autoplay prevented:", e));
-    }
+    // Force play via raw DOM if autoplay is stuck
+    setTimeout(() => {
+      const videos = document.querySelectorAll('video');
+      videos.forEach(video => {
+        video.defaultMuted = true;
+        video.muted = true;
+        video.play().catch(e => console.log("Autoplay prevented:", e));
+      });
+    }, 100);
     const timer = setTimeout(onComplete, 4500);
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -60,18 +62,22 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) 
           initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 1.8, ease: "easeOut" }}
-          className="w-48 md:w-64 mb-6 relative mix-blend-screen"
-        >
-          <video 
-            ref={videoRef}
-            src="/assets/logo_reveal_intro.mp4" 
-            autoPlay 
-            muted 
-            playsInline
-            preload="auto"
-            className="w-full h-full object-contain"
-          />
-        </motion.div>
+          className="w-48 md:w-64 mb-6 relative"
+          dangerouslySetInnerHTML={{
+            __html: `
+              <video 
+                src="/assets/logo_reveal_intro.mp4" 
+                autoplay 
+                muted 
+                playsinline 
+                webkit-playsinline="true"
+                preload="auto"
+                class="w-full h-full object-contain"
+                style="pointer-events: none; mix-blend-mode: screen; transform: translateZ(0);"
+              ></video>
+            `
+          }}
+        />
         <div className="relative">
           <svg viewBox="0 0 400 120" className="w-[280px] md:w-[500px] overflow-visible">
             <motion.text
