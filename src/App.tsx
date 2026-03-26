@@ -50,10 +50,11 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) 
       <div className="relative flex flex-col items-center">
         {/* The seamless Logo Reveal Video (with mix-blend-screen to drop background) */}
         <motion.video 
-          src="/assets/logo reveal intro.mp4" 
+          src="/assets/logo_reveal_intro.mp4" 
           autoPlay 
           muted 
-          playsInline 
+          playsInline
+          preload="auto"
           initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 1.8, ease: "easeOut" }}
@@ -143,16 +144,15 @@ const works = [
     tags: ["UX Research", "UI Design", "Figma", "4 Weeks"],
     link: "https://zepto-cs.netlify.app",
     github: "#",
-    image: "/assets/zepto-thumbnail final.png",
+    image: "/assets/zepto_thumbnail_new.png",
     color: "from-purple-700 via-indigo-600 to-purple-800"
   }
 ];
 
 const skills = [
-  { name: "Product Design", icon: <Palette className="w-5 h-5" />, items: ["Figma", "Wireframing", "Prototyping", "User Flows"], color: "text-rose-400" },
-  { name: "UX Research", icon: <User className="w-5 h-5" />, items: ["Design Thinking", "Journey Maps", "Usability Testing", "Analytics"], color: "text-blue-400" },
-  { name: "Visual & Motion", icon: <Layers className="w-5 h-5" />, items: ["Photoshop", "Illustrator", "After Effects", "Typography"], color: "text-purple-400" },
-  { name: "Development", icon: <Code2 className="w-5 h-5" />, items: ["HTML/CSS/JS", "React", "Tailwind CSS", "Java", "SQL"], color: "text-emerald-400" }
+  { name: "Soft Skills", icon: <User className="w-5 h-5" />, items: ["Communication", "Problem Solving", "Teamwork", "Adaptability", "Time Management"], color: "text-blue-400" },
+  { name: "Design Skills", icon: <Palette className="w-5 h-5" />, items: ["Figma", "UI/UX Design", "Wireframing", "Prototyping", "Design Thinking"], color: "text-rose-400" },
+  { name: "Technical Skills", icon: <Code2 className="w-5 h-5" />, items: ["HTML/CSS/JS", "React", "Tailwind CSS", "Java", "SQL"], color: "text-emerald-400" }
 ];
 
 export default function App() {
@@ -182,7 +182,7 @@ export default function App() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
       setShowScrollTop(window.scrollY > 500);
-      const sections = ["home", "about", "works", "skills", "contact"];
+      const sections = ["home", "about", "works", "skills", "achievements", "contact"];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -244,7 +244,7 @@ export default function App() {
                   </motion.div>
                   
                   <div className="hidden md:flex items-center space-x-1 bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-md">
-                    {["home", "about", "works", "skills", "contact"].map((item) => (
+                    {["home", "about", "works", "skills", "achievements", "contact"].map((item) => (
                       <motion.a
                         key={item}
                         href={`#${item}`}
@@ -261,13 +261,14 @@ export default function App() {
                     ))}
                   </div>
 
-                  <motion.button
+                  <motion.a
+                    href="mailto:hello@gms.dev"
                     whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(99, 102, 241, 0.4)" }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-bold hover:bg-indigo-50 transition-all"
                   >
                     Let's Talk
-                  </motion.button>
+                  </motion.a>
                 </div>
               </div>
             </nav>
@@ -358,7 +359,7 @@ export default function App() {
                       <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-[2.5rem] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity" />
                       <div className="relative aspect-square rounded-[2rem] overflow-hidden border border-white/20 bg-zinc-900 shadow-2xl">
                         <img 
-                          src="/assets/ai image.jpeg" 
+                          src="/assets/ai_image.jpeg" 
                           alt="Profile" 
                           className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                           referrerPolicy="no-referrer"
@@ -443,14 +444,14 @@ export default function App() {
                           href={work.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block relative w-full h-full"
+                          className="block relative w-full h-full md:aspect-[16/9] aspect-[4/3]"
                           data-cursor="view"
                         >
                           {/* Background Image Container */}
                           <img 
                             src={work.image} 
                             alt={work.title} 
-                            className="block w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                            className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                             referrerPolicy="no-referrer"
                           />
                           
@@ -515,14 +516,14 @@ export default function App() {
                         <span className="text-sm font-black uppercase tracking-[0.3em]">Expertise</span>
                         <div className="w-8 h-[2px] bg-emerald-500" />
                       </div>
-                      <h2 className="text-6xl font-black text-white mb-6 font-display">My Toolkit</h2>
+                      <h2 className="text-6xl font-black text-white mb-6 font-display">My Skills</h2>
                       <p className="text-zinc-500 max-w-2xl mx-auto text-lg font-medium">
-                        I leverage a comprehensive set of design methodologies and tools to craft intuitive, user-centered experiences from research to final prototype.
+                        A dynamic blend of technical proficiency, design excellence, and essential interpersonal skills that drive successful project outcomes.
                       </p>
                     </motion.div>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {skills.map((skill, index) => (
                       <motion.div
                         key={skill.name}
@@ -554,6 +555,84 @@ export default function App() {
                         </div>
                       </motion.div>
                     ))}
+                  </div>
+                </div>
+              </section>
+
+              {/* Achievements Section */}
+              <section id="achievements" className="py-32 px-4 relative overflow-hidden">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-pink-600/5 blur-[150px] pointer-events-none" />
+                
+                <div className="max-w-7xl mx-auto relative">
+                  <div className="text-center mb-20">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="flex items-center justify-center gap-3 text-pink-400 mb-6">
+                        <div className="w-8 h-[2px] bg-pink-500" />
+                        <span className="text-sm font-black uppercase tracking-[0.3em]">Beyond the Screen</span>
+                        <div className="w-8 h-[2px] bg-pink-500" />
+                      </div>
+                      <h2 className="text-6xl font-black text-white mb-6 font-display">Athletic Achievements</h2>
+                      <p className="text-zinc-500 max-w-2xl mx-auto text-lg font-medium">
+                        Discipline, strategy, and teamwork aren't just for digital projects. I bring the same competitive spirit and dedication to my professional life.
+                      </p>
+                    </motion.div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    {/* Kabaddi Achievement */}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                      viewport={{ once: false, amount: 0.2 }}
+                      whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
+                      className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-300 relative group overflow-hidden"
+                    >
+                      <div className="absolute -right-10 -top-10 w-40 h-40 bg-pink-500/20 rounded-full blur-3xl group-hover:bg-pink-500/30 transition-all duration-500" />
+                      <div className="relative z-10">
+                        <motion.div 
+                          whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
+                          transition={{ duration: 0.5 }}
+                          className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-pink-400 mb-8 border border-white/5 shadow-xl group-hover:bg-white/10 transition-all"
+                        >
+                          <Trophy className="w-8 h-8" />
+                        </motion.div>
+                        <h3 className="text-3xl font-black mb-2 text-white font-display">Kabaddi</h3>
+                        <h4 className="text-pink-400 text-sm font-bold uppercase tracking-widest mb-6 border-b border-pink-500/20 pb-4 inline-block">State Level Champion</h4>
+                        <p className="text-zinc-400 text-base leading-relaxed font-medium">
+                          Attained the prestigious State Level Championship, demonstrating exceptional physical endurance, tactical awareness, and the ability to perform under high-pressure situations.
+                        </p>
+                      </div>
+                    </motion.div>
+
+                    {/* Cricket Achievement */}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                      viewport={{ once: false, amount: 0.2 }}
+                      transition={{ delay: 0.1 }}
+                      whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
+                      className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-300 relative group overflow-hidden"
+                    >
+                      <div className="absolute -right-10 -top-10 w-40 h-40 bg-amber-500/20 rounded-full blur-3xl group-hover:bg-amber-500/30 transition-all duration-500" />
+                      <div className="relative z-10">
+                        <motion.div 
+                          whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
+                          transition={{ duration: 0.5 }}
+                          className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-amber-400 mb-8 border border-white/5 shadow-xl group-hover:bg-white/10 transition-all"
+                        >
+                          <Trophy className="w-8 h-8" />
+                        </motion.div>
+                        <h3 className="text-3xl font-black mb-2 text-white font-display">Cricket</h3>
+                        <h4 className="text-amber-400 text-sm font-bold uppercase tracking-widest mb-6 border-b border-amber-500/20 pb-4 inline-block">District Level Player</h4>
+                        <p className="text-zinc-400 text-base leading-relaxed font-medium">
+                          Represented at the District Level, showcasing strategic thinking, focus, and strong collaborative teamwork on the field.
+                        </p>
+                      </div>
+                    </motion.div>
                   </div>
                 </div>
               </section>
