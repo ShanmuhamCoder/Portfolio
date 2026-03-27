@@ -153,7 +153,7 @@ const works = [
     title: "Zepto UX Redesign",
     description: "Enhancing Quick-Commerce through Lens AI & Collaborative Shopping. A deep dive into improving user retention and discovery through innovative features.",
     tags: ["UX Research", "UI Design", "Figma", "4 Weeks"],
-    link: "https://zepto-cs.netlify.app",
+    link: "https://zepto-cs.vercel.app",
     github: "#",
     image: "/assets/zepto_thumbnail_new.png",
     color: "from-purple-700 via-indigo-600 to-purple-800"
