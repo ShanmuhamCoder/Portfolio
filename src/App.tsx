@@ -143,12 +143,21 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void; key?: string }) 
 };
 
 const roles = [
+  { text: "Product Engineer", icon: <Layers className="w-6 h-6" /> },
   { text: "Creative Designer", icon: <Palette className="w-6 h-6" /> },
-  { text: "Motion Designer", icon: <Play className="w-6 h-6" /> },
   { text: "Web Developer", icon: <Code className="w-6 h-6" /> }
 ];
 
 const works = [
+  {
+    title: "Aadhi Guru",
+    description: "A production-ready digital ecosystem showcasing end-to-end product excellence. Designed, built, and validated independently, this platform highlights my ability to deliver high-performance, responsive experiences with a focus on real-world usability.",
+    tags: ["UI/UX Design", "Responsive Dev", "Usability Testing", "Product Creation"],
+    link: "https://aadhiguru.in/",
+    github: "#",
+    image: "/assets/aadhiguru_thumbnail.png",
+    color: "from-emerald-700 via-teal-600 to-emerald-800"
+  },
   {
     title: "Zepto UX Redesign",
     description: "Enhancing Quick-Commerce through Lens AI & Collaborative Shopping. A deep dive into improving user retention and discovery through innovative features.",
@@ -395,10 +404,10 @@ export default function App() {
                         <span className="text-indigo-500">Build</span> with Precision.
                       </h2>
                       <p className="text-zinc-300 text-xl leading-relaxed mb-8 font-medium">
-                        I’m a designer who builds and a developer who designs. I live in the space where complex engineering meets intuitive interface, making sure digital products don't just function—they feel right.
+                        I’m a designer who builds and a developer who designs. Specializing in end-to-end product creation, I independently design (UI/UX), build, and validate digital experiences—ensuring every product I deliver is production-ready, highly responsive, and user-centric.
                       </p>
                       <p className="text-zinc-300 text-lg leading-relaxed mb-10 font-medium opacity-80">
-                        My work is driven by a simple question: how can we make technology more human? Whether I’m sketching a flow or writing code, I’m focused on creating things that are useful, elegant, and genuinely valuable.
+                        My work is driven by a commitment to excellence and real-world functionality. From initial wireframing to full-stack implementation and rigorous usability testing, I handle the entire lifecycle of a product to ensure seamless, high-performance results.
                       </p>
 
                       <motion.a 
@@ -497,7 +506,7 @@ export default function App() {
                                   </p>
                                   
                                   <div className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full text-xs font-black uppercase tracking-widest shadow-xl transition-all hover:bg-zinc-200">
-                                    View Case Study <ExternalLink size={14} />
+                                    View Live Project <ExternalLink size={14} />
                                   </div>
                                 </div>
                               </div>
